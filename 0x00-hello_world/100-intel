@@ -1,2 +1,2 @@
-#include stdio
-gcc -S "$CFILE" -O "${CFILE.c}.s"
+#!/bin/bash
+gcc -S -masm=intel "$CFILE" -O "${CFILE.c}.s"
