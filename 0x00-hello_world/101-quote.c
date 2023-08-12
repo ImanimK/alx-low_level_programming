@@ -1,5 +1,5 @@
 #include <unistd.h>
-int main (void)/
+int main (void)
 /**
 * main entry point 
 * Return 1 writes output to standard error
