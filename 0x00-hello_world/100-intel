@@ -1,0 +1,2 @@
+#include stdio
+gcc -S "$CFILE" -O "${CFILE.c}.s"
