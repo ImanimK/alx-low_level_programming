@@ -14,24 +14,18 @@ int main(void)
 {
 	int n;
 
-	srand(time(0)); /* Initialize random number generator based on current time */
-	n = rand() - RAND_MAX / 2; /* Generate a random number and adjust to be centered at 0 */
+	srand(time(0)); /* Initialize random number generator */
+	n = rand() - RAND_MAX / 2; /* Generate a random number */
 
-	printf("The number %d is ", n);
+	printf("%d is ", n);
 
 	if (n > 0)
-	{
-		printf("positive\n"); /* Print if the number is greater than 0 */
-	}
-	else if (n == 0)
-	{
-		printf("zero\n"); /* Print if the number is equal to 0 */
-	}
+		printf("positive\n");
+	else if (n < 0)
+		printf("negative\n");
 	else
-	{
-		printf("negative\n"); /* Print if the number is less than 0 */
-	}
+		printf("zero\n");
 
-	return (0); /* Indicate successful completion of the program */
+	return (0);
 }
 
