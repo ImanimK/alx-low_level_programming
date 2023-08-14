@@ -7,12 +7,8 @@
  */
 int main(void)
 {
-    int i;
-
-    for (i = 0; i < 10; i++)
-        putchar(i + '0');
-
-    putchar('\n');
+    putchar('0');
+    write(1, "\n", 1);
 
     return (0);
 }
