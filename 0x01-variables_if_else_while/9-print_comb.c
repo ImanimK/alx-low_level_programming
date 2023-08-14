@@ -1,23 +1,20 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - Entry point of the program
+ * main - Entry point
  *
- * Description: This program prints all possible combinations of
- * single-digit numbers separated by ", ", in ascending order,
- * using the putchar function.
- *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-int number;
+int i;
 
-for (number = 0; number <= 9; number++)
+for (i = 0; i < 10; i++)
 {
-putchar(number + '0');
+putchar(i + '0');
 
-if (number != 9)
+if (i < 9)
+{
 putchar(',');
 putchar(' ');
 }
@@ -27,3 +24,4 @@ putchar('\n');
 
 return (0);
 }
+
