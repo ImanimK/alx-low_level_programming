@@ -1,8 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stddef.h> // Include necessary standard library header for size_t
-#include <stdio.h>  // Include necessary standard library header for printf
+#include <stddef.h> /* Include necessary standard library header for size_t */
+#include <stdio.h>  /* Include necessary standard library header for printf */
 
 void print_alphabet(void);
 void print_alphabet_x10(void);
