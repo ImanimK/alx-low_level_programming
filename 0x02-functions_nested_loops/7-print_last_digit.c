@@ -1,35 +1,21 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
-int print_last_digit(int n);
-
-int main(void)
-{
-    int number = 12345;
-    int lastDigit = print_last_digit(number);
-
-    _putchar(lastDigit + '0');
-    _putchar('\n');
-
-    return 0;
-}
-
+/**
+ * print_last - prints the last digit of a number.
+ * @n: the int to extract the last digit from
+ * return: the value of the last digit
+*/
 int print_last_digit(int n)
 {
-    int lastDigit = n % 10;
+	int lastDigit;
 
-    if (lastDigit < 0)
-    {
-        lastDigit = -lastDigit; // Convert negative last digit to positive
-    }
+	lastDigit = n % 10;
 
-    _putchar(lastDigit + '0');
-    return lastDigit;
+	if (lastDigit < 0)
+	{
+	lastDigit = -lastDigit;
+	}
+
+	_putchar(lastDigit + '0');
+	return (lastDigit);
 }
 
-int _putchar(char c)
-{
-    /* Your _putchar implementation here */
-    /* This function should output a single character */
-    return write(1, &c, 1);
-}

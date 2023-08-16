@@ -1,41 +1,27 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
-int print_sign(int n);
-
-int main(void)
-{
-    int number = 5;
-    int result = print_sign(number);
-
-    _putchar(result == 1 ? '+' : (result == 0 ? '0' : '-'));
-    _putchar('\n');
-
-    return 0;
-}
-
+/**
+ * print_sign - prints the sign of a number.
+ * @n: int to check
+ * return: 1 and prints + if n > 0
+ * 0 and prints 0 if n is zero
+ * -1 and prints - if n is less than zero
+*/
 int print_sign(int n)
 {
     if (n > 0)
     {
         _putchar('+');
-        return 1; // Positive number
+        return (1);
     }
     else if (n == 0)
     {
         _putchar('0');
-        return 0; // Zero
+        return (0);
     }
-    else
+    else if
     {
         _putchar('-');
-        return -1; // Negative number
+        return (-1);
     }
 }
 
-int _putchar(char c)
-{
-    /* Your _putchar implementation here */
-    /* This function should output a single character */
-    return write(1, &c, 1);
-}

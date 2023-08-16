@@ -1,36 +1,18 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
-int _islower(int c);
-
-int main(void)
-{
-    char character = 'a';
-    if (_islower(character))
-    {
-        _putchar('1');
-    }
-    else
-    {
-        _putchar('0');
-    }
-    _putchar('\n');
-
-    return 0;
-}
-
+/**
+* _islower - checks lowercase character
+* @c: is the char to be checked
+* return: 1 if c is lowercase, 0 otherwise
+*/
 int _islower(int c)
 {
-    if (c >= 'a' && c <= 'z')
-    {
-        return 1; // Character is lowercase
-    }
-    return 0; // Character is not lowercase
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
-int _putchar(char c)
-{
-    /* Your _putchar implementation here */
-    /* This function should output a single character */
-    return write(1, &c, 1);
-}

@@ -1,31 +1,18 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
-int _abs(int n);
-
-int main(void)
-{
-    int number = -10;
-    int absValue = _abs(number);
-
-    _putchar(absValue + '0');
-    _putchar('\n');
-
-    return 0;
-}
-
+/**
+ * _abs - computes the absolute value of an integer.
+ * @n: the integer to check
+ * return: the absolute value of the integer
+ */
 int _abs(int n)
 {
     if (n < 0)
-    {
-        return -n; // Return the negation of negative number
-    }
-    return n; // Return positive number as is
+	{
+        	return (-n);
+	}
+	else
+	{
+		return (n);
+	}
 }
 
-int _putchar(char c)
-{
-    /* Your _putchar implementation here */
-    /* This function should output a single character */
-    return write(1, &c, 1);
-}

@@ -1,16 +1,7 @@
 #include "main.h"
-#include <stdio.h>
-#include <unistd.h>
-void print_to_98(int n);
-
-int main(void)
-{
-    int startNumber = 5;
-    print_to_98(startNumber);
-
-    return 0;
-}
-
+/**
+ * print_to_98 - prints all natural numbers from n to 98
+ */
 void print_to_98(int n)
 {
     if (n <= 98)

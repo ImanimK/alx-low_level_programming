@@ -1,14 +1,8 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
-void jack_bauer(void);
-
-int main(void)
-{
-    jack_bauer();
-    return 0;
-}
-
+/**
+ * jack_bauer  prints every minute of the day of Jack Bauer
+ * starting from 00:00 to 23:59
+ */
 void jack_bauer(void)
 {
     int hour, minute;
@@ -27,9 +21,4 @@ void jack_bauer(void)
     }
 }
 
-int _putchar(char c)
-{
-    /* Your _putchar implementation here */
-    /* This function should output a single character */
-    return write(1, &c, 1);
-}
+

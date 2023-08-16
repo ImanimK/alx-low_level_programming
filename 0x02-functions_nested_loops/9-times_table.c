@@ -1,14 +1,8 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
-void times_table(void);
-
-int main(void)
-{
-    times_table();
-    return (0);
-}
-
+/**
+ * times_table - prints the 9 times table, starting with 0
+ * @i&j:the int to be checked
+ */
 void times_table(void)
 {
     int i, j, result;
@@ -40,9 +34,3 @@ void times_table(void)
     }
 }
 
-int _putchar(char c)
-{
-    /* Your _putchar implementation here */
-    /* This function should output a single character */
-    return write(1, &c, 1);
-}
