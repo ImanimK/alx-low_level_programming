@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <unistd.h>
+#include <stdio.h>
 int add(int a, int b);
 
 int main(void)

@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <unistd.h>
+#include <stdio.h>
 int print_last_digit(int n);
 
 int main(void)

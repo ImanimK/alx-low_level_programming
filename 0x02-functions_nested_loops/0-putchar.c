@@ -1,8 +1,9 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
-
-int _putchar(char c);
+/**
+* main - entry of my code
+*
+* Return: 0
+*/
 int main(void)
 {
     _putchar('_');
@@ -15,12 +16,7 @@ int main(void)
     _putchar('r');
     _putchar('\n');
 
-    return 0;
+    return (0);
 }
 
-int _putchar(char c)
-{
-    /* Your _putchar implementation here */
-    /* This function should output a single character */
-    return write(1, &c, 1);
-}
+

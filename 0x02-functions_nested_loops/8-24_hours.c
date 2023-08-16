@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <unistd.h>
+#include <stdio.h>
 void jack_bauer(void);
 
 int main(void)
