@@ -1,14 +1,8 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
-void print_alphabet_x10(void);
-
-int main(void)
-{
-    print_alphabet_x10();
-    return 0;
-}
-
+/**
+* function that prints 10 times the alphabet, in lowercase
+*
+*/
 void print_alphabet_x10(void)
 {
     char letter;
@@ -24,11 +18,4 @@ void print_alphabet_x10(void)
         }
         _putchar('\n');
     }
-}
-
-int _putchar(char c)
-{
-    /* Your _putchar implementation here */
-    /* This function should output a single character */
-    return write(1, &c, 1);
 }
