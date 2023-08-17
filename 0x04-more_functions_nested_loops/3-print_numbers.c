@@ -8,8 +8,9 @@ void print_numbers(void)
 	int i;
 
 	for (i = 0; i <= 9; i++)
-    {
-	_putchar(i + '0'); // Convert integer to character and print
-    }
-	_putchar('\n'); // Print a new line at the end
+	{
+		_putchar(i + '0');
+	}
+	
+	_putchar('\n');
 }

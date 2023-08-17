@@ -9,7 +9,7 @@ void print_line(int n)
 	if (n <= 0)
     {
 	_putchar('\n');
-	return;
+
     }
 
 	while (n > 0)
@@ -18,5 +18,5 @@ void print_line(int n)
 	n--;
     }
 
-	_putchar('\n'); // Print a new line at the end
+	_putchar('\n');
 }
