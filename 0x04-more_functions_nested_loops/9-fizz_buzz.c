@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 * main - prints fuzz for multiples of 3, buzz for 5
-* return: always 0
+* Return: always 0
 */
 int main(void)
 {	int i;
