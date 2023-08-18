@@ -6,22 +6,22 @@
  *
  * Return: Always 0
  */
-int main(void) 
+int main(void)
 {
 	long num = 612852475143;
 	long divisor = 2;
 
-	while (num > 1) 
+	while (num > 1)
 	{
-		if (num % divisor == 0) 
+		if (num % divisor == 0)
 		{
 			num /= divisor;
 		}
-	       	else 
+		else
 		{
 			divisor++;
-		}	
-		if (divisor > sqrt(num)) 
+		}
+		if (divisor > sqrt(num))
 		{
 			divisor = num;
 		}
