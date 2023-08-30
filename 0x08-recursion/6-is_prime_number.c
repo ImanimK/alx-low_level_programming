@@ -2,6 +2,7 @@
 
 /**
  * check_prime - Helper function to check if a number is prime using recursion.
+ * is_prime_number: returns 1 if the input integer is a prime number, otherwise return 0.
  * @n: The number to check.
  * @divisor: The current divisor to check divisibility with.
  *
