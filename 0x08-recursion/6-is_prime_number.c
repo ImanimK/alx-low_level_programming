@@ -11,7 +11,7 @@ int check_prime(int n, int divisor)
 {
 	if (divisor <= 1)
 	{
-        return (1);
+	return (1);
 	}
 	if (n % divisor == 0)
 	{
