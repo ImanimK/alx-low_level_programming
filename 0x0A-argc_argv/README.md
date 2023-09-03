@@ -1,1 +1,1 @@
-This directory contains what ive learnt in C arguements
+This directory contains what i've learnt in C arguements.
