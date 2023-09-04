@@ -25,6 +25,7 @@ char *argstostr(int ac, char **av)
 		if (av[i] != NULL)
 		{
 		int arg_length = 0;
+
 		while (av[i][arg_length] != '\0')
 		arg_length++;
 		total_length += arg_length + 1;
@@ -53,7 +54,7 @@ char *argstostr(int ac, char **av)
 		}
 	}
 
-	concatenated[concat_index] = '\0';
+concatenated[concat_index] = '\0';
 
-	return (concatenated);
+return (concatenated);
 }
