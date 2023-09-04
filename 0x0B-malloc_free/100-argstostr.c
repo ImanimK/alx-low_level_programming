@@ -43,7 +43,8 @@ char *argstostr(int ac, char **av)
 		if (av[i] != NULL)
 		{
 		int arg_index = 0;
-		while (av[i][arg_index] != '\0')
+
+	while (av[i][arg_index] != '\0')
     			{
 			concatenated[concat_index] = av[i][arg_index];
 			concat_index++;
@@ -53,8 +54,6 @@ char *argstostr(int ac, char **av)
 		concat_index++;
 		}
 	}
-
 concatenated[concat_index] = '\0';
-
 return (concatenated);
 }
