@@ -30,6 +30,7 @@ bool is_positive_number(char *str)
 int main(int argc, char *argv[])
 {
 	int sum = 0;
+	int i;
 
 	if (argc < 2)
 	{
@@ -37,13 +38,13 @@ int main(int argc, char *argv[])
 	return (0);
 	}
 
-	for (int i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		if (!is_positive_number(argv[i]))
-			{
-			_puts("Error");
-			return (1);
-			}
+		{
+		_puts("Error");
+		return (1);
+		}
 	sum += atoi(argv[i]);
 	}
 
