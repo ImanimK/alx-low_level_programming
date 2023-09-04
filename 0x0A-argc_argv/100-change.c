@@ -1,24 +1,20 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
- * @argc: Argument count
- * @argv: Argument vector
- * Return: 0 (Success) or 1 (Error)
+ * @argc: The number of command-line arguments
+ * @argv: An array containing the command-line arguments
+ *
+ * Return: 0 if successful, 1 if error
  */
 int main(int argc, char *argv[])
-{
-	int cents;
-	int coins = 0;
-	int coin_values[] = {25, 10, 5, 2, 1};
-	int num_coin_values = sizeof(coin_values) / sizeof(coin_values[0]);
-	int i;
 
+{
+	int cents, coins;
 	if (argc != 2)
 	{
-	_puts("Error");
+	printf("Error\n");
 	return (1);
 	}
 
@@ -30,12 +26,25 @@ int main(int argc, char *argv[])
 	return (0);
 	}
 
-	for (i = 0; i < num_coin_values; i++)
+	coins = 0;
+
+	while (cents > 0)
 	{
-	coins += cents / coin_values[i];
-	cents %= coin_values[i];
+	if (cents >= 25)
+	cents -= 25;
+	else if (cents >= 10)
+	cents -= 10;
+	else if (cents >= 5)
+	cents -= 5;
+	else if (cents >= 2)
+	cents -= 2;
+	else
+	cents -= 1;
+
+	coins++;
 	}
 
 	printf("%d\n", coins);
-	return (0);
+
+return (0);
 }
