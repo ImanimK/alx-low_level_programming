@@ -7,6 +7,8 @@
  * Description: This function frees memory allocated for the name, owner,
  * and the dog structure itself.
  */
+dog_t *new_dog(char *name, float age, char *owner);
+
 void free_dog(dog_t *d)
 {
 	if (d == NULL)

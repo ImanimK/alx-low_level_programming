@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "dog.h"
 /**
@@ -29,7 +30,7 @@ int main(void)
 	if (my_dog == NULL)
 	{
 	fprintf(stderr, "Failed to create a new dog.\n");
-	return (1); // Return an error code
+	return (1);
 	}
 
 	printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
