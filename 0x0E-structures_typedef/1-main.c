@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "dog.h"
-#include <string.h>
 
 /**
  * main - check the code
@@ -14,15 +13,4 @@ int main(void)
     init_dog(&my_dog, "Poppy", 3.5, "Bob");
     printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
     return (0);
-}
-
-void init_dog(struct dog *d, char *name, float age, char *owner) {
-  /* Copy the name into the structure */
-  strcpy(d->name, name);
-
-  /* Set the age */
-  d->age = age;
-
-  /* Copy the owner into the structure */
-  strcpy(d->owner, owner);
 }

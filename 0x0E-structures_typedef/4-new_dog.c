@@ -1,65 +1,41 @@
-#include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "dog.h"
 
+/**
+ * new_dog - Creates a new dog
+ * @name: Pointer to a string representing the dog's name
+ * @age: The age of the dog
+ * @owner: Pointer to a string representing the owner's name
+ *
+ * Return: Pointer to the new dog, or NULL on failure
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-    dog_t *new_dog;
+	dog_t *new_dog_ptr;
+	char *name_copy, *owner_copy;
 
-    if (name == NULL || owner == NULL)
-    {
-        return (NULL);
-    }
+    /* Allocate memory for the dog structure */
+	new_dog_ptr = malloc(sizeof(dog_t));
+	if (new_dog_ptr == NULL)
+	return (NULL);
 
-    new_dog = (dog_t *)malloc(sizeof(dog_t));
-    if (new_dog == NULL)
-    {
-        return (NULL);
-    }
+	/* Allocate memory for the name and owner strings and copy their contents */
+	name_copy = strdup(name);
+	owner_copy = strdup(owner);
 
-    new_dog->name = strdup(name);
-    if (new_dog->name == NULL)
-    {
-        free(new_dog);
-        return (NULL);
-    }
+	if (name_copy == NULL || owner_copy == NULL)
+	{
+	free(name_copy);
+	free(owner_copy);
+	free(new_dog_ptr);
+	return (NULL);
+	}
 
-    new_dog->age = age;
+	new_dog_ptr->name = name_copy;
+	new_dog_ptr->age = age;
+	new_dog_ptr->owner = owner_copy;
 
-    new_dog->owner = strdup(owner);
-    if (new_dog->owner == NULL)
-    {
-        free(new_dog->name);
-        free(new_dog);
-        return (NULL);
-    }
-
-    return (new_dog);
-}
-
-int main()
-{
-    char *name = "Buddy";
-    float age = 3.5;
-    char *owner = "John";
-
-    dog_t *my_dog = new_dog(name, age, owner);
-
-    if (my_dog != NULL)
-    {
-        printf("New dog's name: %s\n", my_dog->name);
-        printf("New dog's age: %.1f\n", my_dog->age);
-        printf("New dog's owner: %s\n", my_dog->owner);
-    }
-    else
-    {
-        printf("Failed to create a new dog.\n");
-    }
-
-    free(my_dog->name);
-    free(my_dog->owner);
-    free(my_dog);
-
-    return (0);
+	return (new_dog_ptr);
 }

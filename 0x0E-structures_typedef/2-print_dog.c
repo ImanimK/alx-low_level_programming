@@ -1,39 +1,16 @@
-#include "dog.h"
 #include <stdio.h>
-/**
- * main - Entry point of the program.
- *
- * Description: This function creates a struct dog instance, initializes its
- * name, age, and owner fields, and then calls print_dog to print the dog's
- * information.
- *
- * Return: Always 0 (Success)
- */
+#include "dog.h"
 
+/**
+ * print_dog - Prints the elements of a struct dog
+ * @d: Pointer to the struct dog to print
+ */
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
-		{
-		return;
-		}
+	return;
 
-	printf("Name: %s\n", (d->name != NULL) ? d->name : "(nil)");
-	printf("Age: %.1f\n", d->age);
-	printf("Owner: %s\n", (d->owner != NULL) ? d->owner : "(nil)");
-}
-
-int main()
-{
-	struct dog my_dog;
-	char *name = "Buddy";
-	float age = 3.5;
-	char *owner = "John";
-
-	my_dog.name = name;
-	my_dog.age = age;
-	my_dog.owner = owner;
-
-	print_dog(&my_dog);
-
-	return (0);
+	printf("Name: %s\n", d->name ? d->name : "(nil)");
+	printf("Age: %.6f\n", d->age);
+	printf("Owner: %s\n", d->owner ? d->owner : "(nil)");
 }
