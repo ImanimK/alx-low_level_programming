@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	{
 	printf("%02x", main_ptr[i]);
 	if (i < num_bytes - 1)
-    		printf(" ");
+		printf(" ");
 	else
 		printf("\n");
 	}
